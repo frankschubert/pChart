@@ -55,7 +55,7 @@ class pCache {
         if(file_exists($this->CacheFolder.$Hash))
             return true;
         else
-            return true;
+            return false;
     }
 
     /**
