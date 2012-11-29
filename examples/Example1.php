@@ -20,7 +20,7 @@ $DataSet->setSeriesName("January", "Serie1");
 $DataSet->setSeriesName("February", "Serie2");
 $DataSet->setSeriesName("March", "Serie3");
 $DataSet->getDataDescription()->SetYAxisName("Average age");
-$DataSet->getDataDescription()->SetYUnit("µs");
+$DataSet->getDataDescription()->SetYAxisUnit("µs");
 
 // Initialise the graph   
 $Chart->setFontProperties("$DIR/../Fonts/tahoma.ttf", 8);

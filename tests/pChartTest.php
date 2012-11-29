@@ -30,7 +30,7 @@ class pChartTest extends PHPUnit_Framework_TestCase {
         $DataSet->setSeriesName("February", "Serie2");
         $DataSet->setSeriesName("March", "Serie3");
         $DataSet->getDataDescription()->setYAxisName("Average age");
-        $DataSet->getDataDescription()->setYUnit("µs");
+        $DataSet->getDataDescription()->setYAxisUnit("µs");
 
         // Initialise the graph   
         $Test = new pChart(700, 230, $canvas);

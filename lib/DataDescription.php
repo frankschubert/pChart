@@ -57,40 +57,36 @@ class DataDescription {
         return $this->yAxisName;
     }
 
-    /**
-     * @todo Not sure I'm happy with the name of this - should it be
-     * setXAxisFormat()?
-     */
-    public function setXFormat($format) {
+    public function setXAxisFormat($format) {
         /** @todo Check that $format is a recognised format value here */
         $this->xFormat = $format;
     }
 
-    public function getXFormat() {
+    public function getXAxisFormat() {
         return $this->xFormat;
     }
 
-    public function setYFormat($format) {
+    public function setYAxisFormat($format) {
         $this->yFormat = $format;
     }
 
-    public function getYFormat() {
+    public function getYAxisFormat() {
         return $this->yFormat;
     }
 
-    public function setXUnit($unit) {
+    public function setXAxisUnit($unit) {
         $this->xUnit = $unit;
     }
 
-    public function getXUnit() {
+    public function getXAxisUnit() {
         return $this->xUnit;
     }
 
-    public function setYUnit($unit) {
+    public function setYAxisUnit($unit) {
         $this->yUnit = $unit;
     }
 
-    public function getYUnit() {
+    public function getYAxisUnit() {
         return $this->yUnit;
     }
 

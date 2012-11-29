@@ -381,8 +381,8 @@ class pChart {
             $Value = round($Value * pow(10, $Decimals)) / pow(10, $Decimals);
             $Value = $this->convertValueForDisplay(
                 $Value,
-                $Data->getDataDescription()->getYFormat(),
-                $Data->getDataDescription()->getYUnit()
+                $Data->getDataDescription()->getYAxisFormat(),
+                $Data->getDataDescription()->getYAxisUnit()
             );
 
             $Position  = imageftbbox($this->FontSize, 0, $this->FontName, $Value);
@@ -464,8 +464,8 @@ class pChart {
                 $Value = $Values[$Data->getDataDescription()->getPosition()];
                 $Value = $this->convertValueForDisplay(
                     $Value,
-                    $Data->getDataDescription()->getXFormat(),
-                    $Data->getDataDescription()->getXUnit()
+                    $Data->getDataDescription()->getXAxisFormat(),
+                    $Data->getDataDescription()->getXAxisUnit()
                 );
 
                 $Position   = imageftbbox($this->FontSize, $Angle, $this->FontName, $Value);
@@ -712,8 +712,8 @@ class pChart {
             $Value = round($Value * pow(10, $Decimals)) / pow(10, $Decimals);
             $Value = $this->convertValueForDisplay(
                 $Value,
-                $Data->getDataDescription()->getYFormat(),
-                $Data->getDataDescription()->getYUnit()
+                $Data->getDataDescription()->getYAxisFormat(),
+                $Data->getDataDescription()->getYAxisUnit()
             );
 
             $Position  = imageftbbox($this->FontSize, 0, $this->FontName, $Value);
@@ -785,8 +785,8 @@ class pChart {
 
             $Value = $this->convertValueForDisplay(
                 $Value,
-                $Data->getDataDescription()->getYFormat(),
-                $Data->getDataDescription()->getYUnit()
+                $Data->getDataDescription()->getYAxisFormat(),
+                $Data->getDataDescription()->getYAxisUnit()
             );
 
             $Position   = imageftbbox($this->FontSize, $Angle, $this->FontName, $Value);
@@ -1396,7 +1396,7 @@ class pChart {
 
                 /* Save point into the image map if option activated */
                 if($this->BuildMap)
-                    $this->addToImageMap($XPos - $Hsize, $YPos - $Hsize, $XPos + 1 + $Hsize, $YPos + $Hsize + 1, $DataDescription->description[$ColName], $Values[$ColName].$DataDescription->getYUnit(), "Plot");
+                    $this->addToImageMap($XPos - $Hsize, $YPos - $Hsize, $XPos + 1 + $Hsize, $YPos + $Hsize + 1, $DataDescription->description[$ColName], $Values[$ColName].$DataDescription->getYAxisUnit(), "Plot");
 
                 if(is_numeric($Value)) {
                     if(!isset ($DataDescription->seriesSymbols[$ColName])) {
@@ -1640,7 +1640,7 @@ class pChart {
 
                         /* Save point into the image map if option activated */
                         if($this->BuildMap)
-                            $this->addToImageMap($XPos - 3, $YPos - 3, $XPos + 3, $YPos + 3, $DataDescription->description[$ColName], $Values[$ColName].$DataDescription->getYUnit(), "Line");
+                            $this->addToImageMap($XPos - 3, $YPos - 3, $XPos + 3, $YPos + 3, $DataDescription->description[$ColName], $Values[$ColName].$DataDescription->getYAxisUnit(), "Line");
 
                         if(!is_numeric($Value)) {
                             $XLast = -1;
@@ -2061,7 +2061,7 @@ class pChart {
 
                 /* Save point into the image map if option activated */
                 if($this->BuildMap)
-                    $this->addToImageMap($XPos - 3, $YPos - 3, $XPos + 3, $YPos + 3, $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYUnit(), "FLine");
+                    $this->addToImageMap($XPos - 3, $YPos - 3, $XPos + 3, $YPos + 3, $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYAxisUnit(), "FLine");
 
                 if(!is_numeric($Value)) {
                     $PointsCount++;
@@ -2171,7 +2171,7 @@ class pChart {
 
                         /* Save point into the image map if option activated */
                         if($this->BuildMap)
-                            $this->addToImageMap($X1, min($Y1, $Y2), $X2, max($Y1, $Y2), $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYUnit(), "oBar");
+                            $this->addToImageMap($X1, min($Y1, $Y2), $X2, max($Y1, $Y2), $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYAxisUnit(), "oBar");
 
                         $this->canvas->drawLine(
                             new Point($X1,
@@ -2227,7 +2227,7 @@ class pChart {
 
                         /* Save point into the image map if option activated */
                         if($this->BuildMap) {
-                            $this->addToImageMap($XPos + 1, min($YZero, $YPos), $XPos + $SeriesWidth - 1, max($YZero, $YPos), $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYUnit(), "Bar");
+                            $this->addToImageMap($XPos + 1, min($YZero, $YPos), $XPos + $SeriesWidth - 1, max($YZero, $YPos), $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYAxisUnit(), "Bar");
                         }
 
                         if($Alpha == 100) {
@@ -2300,7 +2300,7 @@ class pChart {
 
                         /* Save point into the image map if option activated */
                         if($this->BuildMap)
-                            $this->addToImageMap($XPos + 1, min($YBottom, $YPos), $XPos + $SeriesWidth - 1, max($YBottom, $YPos), $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYUnit(), "sBar");
+                            $this->addToImageMap($XPos + 1, min($YBottom, $YPos), $XPos + $SeriesWidth - 1, max($YBottom, $YPos), $DataDescription->description[$ColName], $Data [$Key] [$ColName].$DataDescription->getYAxisUnit(), "sBar");
 
                         $this->canvas->drawFilledRectangle(
                             new Point($XPos + 1,
