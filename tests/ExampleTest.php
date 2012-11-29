@@ -99,11 +99,11 @@ class ExampleTest extends PHPUnit_Framework_TestCase {
         $this->loadexample(16);
     }
 
-    /* tests below are currently broken
+    function testExample17() {
+        $this->loadexample(17);
+    }
 
-        function testExample17() {
-            $this->loadexample(17);
-        }
+    /* tests below are currently broken
 
         function testExample18() {
             $this->loadexample(18);
